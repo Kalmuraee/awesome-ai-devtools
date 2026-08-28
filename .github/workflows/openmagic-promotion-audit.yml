@@ -1,0 +1,242 @@
+name: Publish OpenMagic promotion audit
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Generate audit files
+        run: |
+          cat > /tmp/audit.py <<'PY'
+          from __future__ import annotations
+          import base64, csv, json, os, re, time, urllib.error, urllib.parse, urllib.request
+          from collections import Counter, defaultdict
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          API = "https://api.github.com"
+          TOKEN = os.environ["GH_TOKEN"]
+          HEADERS = {
+              "Accept": "application/vnd.github+json",
+              "Authorization": f"Bearer {TOKEN}",
+              "User-Agent": "openmagic-promotion-audit",
+              "X-GitHub-Api-Version": "2022-11-28",
+          }
+          EXACT = "github.com/kalmuraee/openmagic"
+
+          def api(path: str):
+              url = path if path.startswith("http") else API + path
+              for attempt in range(6):
+                  req = urllib.request.Request(url, headers=HEADERS)
+                  try:
+                      with urllib.request.urlopen(req, timeout=45) as response:
+                          return json.load(response)
+                  except urllib.error.HTTPError as exc:
+                      if exc.code == 404:
+                          return None
+                      if exc.code in (403, 429) and attempt < 5:
+                          delay = int(exc.headers.get("Retry-After") or 2 ** attempt)
+                          time.sleep(min(delay + 1, 65))
+                          continue
+                      raise
+                  except Exception:
+                      if attempt == 5:
+                          raise
+                      time.sleep(2 ** attempt)
+              raise RuntimeError(url)
+
+          query = "is:pr author:Kalmuraee OpenMagic in:title -repo:Kalmuraee/OpenMagic"
+          q = urllib.parse.quote(query)
+          first = api(f"/search/issues?q={q}&per_page=100&page=1&sort=created&order=asc")
+          issues = list(first["items"])
+          total = int(first["total_count"])
+          for page in range(2, (total + 99) // 100 + 1):
+              issues += api(f"/search/issues?q={q}&per_page=100&page={page}&sort=created&order=asc")["items"]
+
+          records = []
+          repo_meta = {}
+          for i, issue in enumerate(issues, 1):
+              repo = issue["repository_url"].split("/repos/", 1)[1]
+              number = int(issue["number"])
+              pr = api(f"/repos/{repo}/pulls/{number}") or {}
+              files = api(f"/repos/{repo}/pulls/{number}/files?per_page=100") or []
+              if repo not in repo_meta:
+                  meta = api(f"/repos/{repo}") or {}
+                  listed = False
+                  listing_file = None
+                  readme = api(f"/repos/{repo}/readme")
+                  if readme and readme.get("content"):
+                      text = base64.b64decode(readme["content"]).decode("utf-8", "replace")
+                      listed = EXACT in text.lower() or bool(re.search(r"\bOpenMagic\b", text, re.I))
+                      listing_file = readme.get("path") if listed else None
+                  repo_meta[repo] = {
+                      "description": meta.get("description") or "",
+                      "stars": int(meta.get("stargazers_count") or 0),
+                      "archived": bool(meta.get("archived", False)),
+                      "disabled": bool(meta.get("disabled", False)),
+                      "pushed_at": meta.get("pushed_at"),
+                      "topics": meta.get("topics") or [],
+                      "currently_lists_openmagic": listed,
+                      "listing_file": listing_file,
+                  }
+              records.append({
+                  "repository": repo,
+                  "number": number,
+                  "url": issue["html_url"],
+                  "title": issue["title"],
+                  "state": issue["state"],
+                  "merged_at": (issue.get("pull_request") or {}).get("merged_at") or pr.get("merged_at"),
+                  "created_at": issue.get("created_at"),
+                  "updated_at": issue.get("updated_at"),
+                  "comments": int(issue.get("comments") or 0),
+                  "labels": [x.get("name") for x in issue.get("labels", [])],
+                  "head_repo": ((pr.get("head") or {}).get("repo") or {}).get("full_name"),
+                  "head_branch": (pr.get("head") or {}).get("ref"),
+                  "head_sha": (pr.get("head") or {}).get("sha"),
+                  "base_branch": (pr.get("base") or {}).get("ref"),
+                  "changed_paths": [x.get("filename") for x in files],
+                  "added_lines": [
+                      line[1:].strip()
+                      for f in files for line in (f.get("patch") or "").splitlines()
+                      if line.startswith("+") and not line.startswith("+++") and re.search(r"\bOpenMagic\b", line, re.I)
+                  ],
+              })
+              if i % 20 == 0:
+                  print(f"audited {i}/{len(issues)}")
+
+          by_repo = defaultdict(list)
+          for r in records:
+              by_repo[r["repository"]].append(r)
+
+          positive = ("coding", "developer", "devtool", "dev-tool", "code", "ai-tools", "ai tools", "agent", "web development")
+          negative = ("cybersecurity", "hacking", "game dev", "game-dev", "dataset", "techniques", "directories", "medical", "research papers")
+          good_title = ("code", "coding", "developer", "devtool", "programming", "ide", "agent", "browser")
+          bad_title = ("content", "video", "knowledge", "backend", "chatui", "data", "ml tools", "cyber", "hacking", "game", "portal")
+
+          for repo, group in by_repo.items():
+              meta = repo_meta[repo]
+              text = f"{repo} {meta['description']} {' '.join(meta['topics'])}".lower()
+              score = sum(2 for x in positive if x in text) - sum(4 for x in negative if x in text)
+              fit = "high" if any(x in text for x in ("coding", "developer", "devtool", "ai-tools", "ai tools")) else ("medium" if score >= 2 else "low")
+              open_group = [r for r in group if r["state"] == "open"]
+              def rank(r):
+                  title = r["title"].lower()
+                  return sum(3 for x in good_title if x in title) - sum(5 for x in bad_title if x in title), r["created_at"] or ""
+              keep = max(open_group, key=rank) if open_group else None
+              for r in group:
+                  r.update({
+                      "duplicate_count": len(group),
+                      "repo_fit": fit,
+                      "repo_stars": meta["stars"],
+                      "repo_archived": meta["archived"],
+                      "repo_pushed_at": meta["pushed_at"],
+                      "currently_lists_openmagic": meta["currently_lists_openmagic"],
+                      "listing_file": meta["listing_file"],
+                  })
+                  if r["merged_at"]:
+                      action = "merged"
+                  elif r["state"] != "open":
+                      action = "closed_unmerged"
+                  elif meta["currently_lists_openmagic"]:
+                      action = "close_already_listed"
+                  elif meta["archived"] or meta["disabled"]:
+                      action = "close_inactive_repository"
+                  elif len(open_group) > 1 and r is not keep:
+                      action = "close_duplicate"
+                  elif fit == "low":
+                      action = "manual_fit_review"
+                  else:
+                      action = "keep_open"
+                  r["recommendation"] = action
+
+          records.sort(key=lambda r: (r["recommendation"], r["repository"].lower(), r["number"]))
+          counts = Counter(r["recommendation"] for r in records)
+          states = Counter("merged" if r["merged_at"] else r["state"] for r in records)
+          summary = {
+              "pull_requests": len(records),
+              "unique_repositories": len(by_repo),
+              "states": dict(states),
+              "recommendations": dict(counts),
+              "duplicate_repositories": sum(1 for x in by_repo.values() if len(x) > 1),
+          }
+          payload = {
+              "generated_at": datetime.now(timezone.utc).isoformat(),
+              "query": query,
+              "summary": summary,
+              "pull_requests": records,
+          }
+          out = Path("promotion-audit")
+          out.mkdir(exist_ok=True)
+          (out / "summary.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
+          (out / "all-prs.json").write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+          for name, actions in {
+              "cleanup-required": {"close_duplicate", "close_already_listed", "close_inactive_repository"},
+              "manual-review": {"manual_fit_review"},
+              "keep-open": {"keep_open"},
+              "merged": {"merged"},
+          }.items():
+              subset = [r for r in records if r["recommendation"] in actions]
+              (out / f"{name}.json").write_text(json.dumps(subset, indent=2) + "\n", encoding="utf-8")
+
+          fields = ["recommendation", "repository", "number", "url", "title", "state", "merged_at", "head_repo", "head_branch", "duplicate_count", "repo_fit", "repo_stars", "currently_lists_openmagic", "repo_archived", "repo_pushed_at", "changed_paths", "added_lines"]
+          with (out / "all-prs.csv").open("w", newline="", encoding="utf-8") as fh:
+              writer = csv.DictWriter(fh, fieldnames=fields, lineterminator="\n")
+              writer.writeheader()
+              for r in records:
+                  row = {k: r.get(k) for k in fields}
+                  row["changed_paths"] = " | ".join(row["changed_paths"] or [])
+                  row["added_lines"] = " | ".join(row["added_lines"] or [])
+                  writer.writerow(row)
+
+          lines = [
+              "# OpenMagic promotion campaign audit", "",
+              f"Generated: `{payload['generated_at']}`", "",
+              f"- PRs: **{summary['pull_requests']}**",
+              f"- Unique repositories: **{summary['unique_repositories']}**",
+              f"- Merged: **{states.get('merged', 0)}**",
+              f"- Open: **{states.get('open', 0)}**",
+              f"- Closed without merge: **{states.get('closed', 0)}**",
+              f"- Repositories with duplicate submissions: **{summary['duplicate_repositories']}**", "",
+              "## Recommendations", "",
+          ]
+          for key in sorted(counts):
+              lines.append(f"- `{key}`: **{counts[key]}**")
+          lines += ["", "See `all-prs.csv` and the action-specific JSON files for the complete ledger."]
+          (out / "README.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+          print(json.dumps(summary, indent=2))
+          PY
+          python /tmp/audit.py
+
+      - name: Publish report branch
+        run: |
+          git config user.name "OpenMagic Promotion Audit"
+          git config user.email "actions@users.noreply.github.com"
+          git checkout -B openmagic-promotion-audit
+          rm -f .github/workflows/openmagic-promotion-audit.yml
+          git add promotion-audit .github/workflows/openmagic-promotion-audit.yml
+          git diff --cached --check -- ':!promotion-audit/*.csv'
+          git commit -m "docs: publish OpenMagic promotion audit"
+          git push --force origin HEAD:openmagic-promotion-audit
+
+      - name: Restore fork main to upstream
+        if: always()
+        run: |
+          parent=$(gh api repos/${GITHUB_REPOSITORY} --jq '.parent.full_name')
+          branch=$(gh api repos/${GITHUB_REPOSITORY} --jq '.parent.default_branch')
+          git fetch https://github.com/${parent}.git ${branch}
+          git push --force origin FETCH_HEAD:main
