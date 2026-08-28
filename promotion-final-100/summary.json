@@ -1,0 +1,8 @@
+{
+  "generated_at": "2026-08-28T13:36:48.696853+00:00",
+  "strictly_verified_distinct_targets": 100,
+  "verified_pool": 159,
+  "rejected_during_strict_review": 191,
+  "prepared_branches": 2,
+  "all_openmagic_absent_at_verification": true
+}
