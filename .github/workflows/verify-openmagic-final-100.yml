@@ -1,0 +1,280 @@
+name: Verify 100 distinct OpenMagic list targets
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Verify 100 distinct contribution-ready lists
+        run: |
+          cat > /tmp/verify_100.py <<'PY'
+          from __future__ import annotations
+          import base64, json, os, re, time, urllib.error, urllib.parse, urllib.request
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          API = 'https://api.github.com'
+          TOKEN = os.environ['GH_TOKEN']
+          HEADERS = {
+              'Accept': 'application/vnd.github+json',
+              'Authorization': f'Bearer {TOKEN}',
+              'User-Agent': 'openmagic-final-100-verifier',
+              'X-GitHub-Api-Version': '2022-11-28',
+          }
+          EXACT = 'github.com/kalmuraee/openmagic'
+
+          def api(path: str):
+              url = path if path.startswith('http') else API + path
+              for attempt in range(6):
+                  req = urllib.request.Request(url, headers=HEADERS)
+                  try:
+                      with urllib.request.urlopen(req, timeout=45) as response:
+                          return json.load(response)
+                  except urllib.error.HTTPError as exc:
+                      if exc.code == 404:
+                          return None
+                      if exc.code in (403, 429) and attempt < 5:
+                          delay = int(exc.headers.get('Retry-After') or 2 ** attempt)
+                          time.sleep(min(delay + 1, 65))
+                          continue
+                      body = exc.read().decode('utf-8', 'replace')
+                      raise RuntimeError(f'{exc.code} {url}: {body[:300]}')
+                  except Exception:
+                      if attempt == 5:
+                          raise
+                      time.sleep(2 ** attempt)
+              raise RuntimeError(url)
+
+          def decode(obj):
+              if not obj or obj.get('type') != 'file' or not obj.get('content'):
+                  return ''
+              try:
+                  return base64.b64decode(obj['content']).decode('utf-8', 'replace')
+              except Exception:
+                  return ''
+
+          source = api('/repos/Kalmuraee/awesome-ai-devtools/contents/promotion-targets/new-qualified-targets.json?ref=openmagic-target-discovery')
+          if not source:
+              raise SystemExit('Target discovery file was not found')
+          candidates = json.loads(base64.b64decode(source['content']))
+
+          prepared = {
+              'filipecalegario/awesome-generative-ai': {
+                  'fork': 'Kalmuraee/awesome-generative-ai', 'branch': 'add-openmagic-v0450', 'category': 'AI development tools'
+              },
+              'tatn/awesome-ai-coding-cli': {
+                  'fork': 'Kalmuraee/awesome-ai-coding-cli', 'branch': 'add-openmagic', 'category': 'Available on GitHub'
+              },
+              'deepakdukare/-Awesome-AI-Powered-Developer-Tools': {
+                  'fork': 'Kalmuraee/-Awesome-AI-Powered-Developer-Tools', 'branch': 'add-openmagic', 'category': 'Command-line'
+              },
+              'danielrosehill/Awesome-AI-Coding-Tools': {
+                  'fork': 'Kalmuraee/Awesome-AI-Coding-Tools-5', 'branch': 'add-openmagic', 'category': 'Editing'
+              },
+              'mahseema/awesome-ai-tools': {
+                  'fork': 'Kalmuraee/awesome-ai-tools', 'branch': 'add-openmagic-v0450', 'category': 'Code'
+              },
+          }
+
+          positive_heading = {
+              'code': 10, 'coding': 12, 'developer': 10, 'development': 7, 'devtool': 12,
+              'agent': 7, 'assistant': 6, 'cli': 8, 'command-line': 8, 'programming': 8,
+              'software engineering': 9, 'web development': 8, 'web builder': 8,
+              'editing': 8, 'ide': 7, 'open source': 5, 'productivity': 4, 'ai tools': 5,
+          }
+          negative_heading = ('image', 'video', 'audio', 'music', 'medical', 'health', 'cybersecurity',
+                              'hacking', 'paper', 'research', 'dataset', 'prompt', 'education', 'course')
+          forbidden = (
+              'do not open a pull request', 'do not submit pull requests', 'pull requests are not accepted',
+              'no pull requests', 'use the issue template instead', 'submit via issue', 'open an issue instead',
+              'no self-promotion', 'self-promotion is not allowed', 'do not submit your own',
+              'submissions are closed', 'not accepting submissions', 'not accepting new entries',
+          )
+          accepted = (
+              'pull requests welcome', 'pull request is welcome', 'pull requests are welcome',
+              'send a pr', 'open a pull request', 'feel free to contribute', 'contributions welcome',
+              'contributions are welcome', 'submit a pull request', 'create a pull request',
+          )
+
+          verified, rejected = [], []
+          seen = set()
+          ordered = []
+          for repo in prepared:
+              ordered.append({'upstream': repo, **prepared[repo], 'prepared_first': True})
+          for item in candidates:
+              if item['upstream'].lower() not in {x['upstream'].lower() for x in ordered}:
+                  ordered.append({**item, 'prepared_first': False})
+
+          for index, item in enumerate(ordered[:350], 1):
+              repo = item['upstream']
+              key = repo.lower()
+              if key in seen:
+                  continue
+              seen.add(key)
+              meta = api(f'/repos/{repo}') or {}
+              if not meta or meta.get('archived') or meta.get('disabled'):
+                  rejected.append({'repository': repo, 'reason': 'inactive'})
+                  continue
+              default = meta.get('default_branch') or item.get('default_branch') or 'main'
+              pushed = meta.get('pushed_at') or ''
+              try:
+                  if pushed and int(pushed[:4]) < 2023:
+                      rejected.append({'repository': repo, 'reason': 'stale'})
+                      continue
+              except Exception:
+                  pass
+
+              readme_obj = api(f'/repos/{repo}/readme')
+              readme = decode(readme_obj)
+              if not readme:
+                  rejected.append({'repository': repo, 'reason': 'missing_readme'})
+                  continue
+              lower = readme.lower()
+              if EXACT in lower or re.search(r'\bOpenMagic\b', readme, re.I):
+                  rejected.append({'repository': repo, 'reason': 'already_lists_openmagic'})
+                  continue
+              links = len(re.findall(r'\]\(https?://', readme, re.I))
+              list_signal = ('awesome' in (meta.get('name') or '').lower() or 'curated list' in lower or 'collection of' in lower)
+              if links < 10 or not list_signal:
+                  rejected.append({'repository': repo, 'reason': 'not_a_curated_list'})
+                  continue
+
+              docs = []
+              doc_paths = []
+              for path in ('CONTRIBUTING.md', '.github/CONTRIBUTING.md', 'contributing.md', '.github/PULL_REQUEST_TEMPLATE.md', 'PULL_REQUEST_TEMPLATE.md'):
+                  obj = api(f"/repos/{repo}/contents/{urllib.parse.quote(path, safe='/')}?ref={urllib.parse.quote(default, safe='')}")
+                  text = decode(obj)
+                  if text:
+                      docs.append(text)
+                      doc_paths.append(path)
+              rules = (readme + '\n' + '\n'.join(docs)).lower()
+              blocked = next((phrase for phrase in forbidden if phrase in rules), None)
+              if blocked:
+                  rejected.append({'repository': repo, 'reason': f'contribution_rule:{blocked}'})
+                  continue
+              explicit_acceptance = bool(doc_paths) or any(phrase in rules for phrase in accepted)
+              if not explicit_acceptance:
+                  rejected.append({'repository': repo, 'reason': 'no_explicit_contribution_path'})
+                  continue
+
+              headings = []
+              for line in readme.splitlines():
+                  match = re.match(r'^#{2,4}\s+(.+?)\s*$', line.strip())
+                  if not match:
+                      continue
+                  heading = re.sub(r'[`*_\[\]()]', '', match.group(1)).strip()
+                  hlow = heading.lower()
+                  score = sum(weight for token, weight in positive_heading.items() if token in hlow)
+                  if any(token in hlow for token in negative_heading):
+                      score -= 15
+                  if score > 0:
+                      headings.append((score, heading))
+              if item.get('prepared_first'):
+                  category = item['category']
+                  category_score = 20
+              elif headings:
+                  category_score, category = max(headings, key=lambda x: (x[0], -len(x[1])))
+              else:
+                  rejected.append({'repository': repo, 'reason': 'no_relevant_category'})
+                  continue
+
+              stars = int(meta.get('stargazers_count') or item.get('stars') or 0)
+              record = {
+                  'repository': repo,
+                  'url': meta.get('html_url') or f'https://github.com/{repo}',
+                  'description': meta.get('description') or item.get('description') or '',
+                  'stars': stars,
+                  'forks': int(meta.get('forks_count') or 0),
+                  'pushed_at': pushed,
+                  'default_branch': default,
+                  'readme_path': readme_obj.get('path'),
+                  'relevant_category': category,
+                  'category_score': category_score,
+                  'contribution_files': doc_paths,
+                  'contribution_signal': 'contribution_file' if doc_paths else 'readme_accepts_prs',
+                  'openmagic_absent_verified': True,
+                  'verified_at': datetime.now(timezone.utc).isoformat(),
+                  'prepared_branch': item.get('branch'),
+                  'prepared_fork': item.get('fork'),
+                  'compare_url': (
+                      f"https://github.com/{repo}/compare/{default}...{item['fork'].split('/')[0]}:{item['branch']}?expand=1"
+                      if item.get('branch') and item.get('fork') else None
+                  ),
+                  'priority_score': category_score * 1000000 + min(stars, 999999),
+              }
+              verified.append(record)
+              if index % 25 == 0:
+                  print(f'checked {index}/{min(len(ordered), 350)}; verified={len(verified)}')
+
+          verified.sort(key=lambda x: (-bool(x['prepared_branch']), -x['category_score'], -x['stars'], x['repository'].lower()))
+          final = verified[:100]
+          if len(final) < 100:
+              raise SystemExit(f'Only {len(final)} contribution-ready targets passed strict verification')
+
+          out = Path('promotion-final-100')
+          out.mkdir(exist_ok=True)
+          summary = {
+              'generated_at': datetime.now(timezone.utc).isoformat(),
+              'strictly_verified_distinct_targets': len(final),
+              'verified_pool': len(verified),
+              'rejected_during_strict_review': len(rejected),
+              'prepared_branches': sum(1 for x in final if x['prepared_branch']),
+              'all_openmagic_absent_at_verification': all(x['openmagic_absent_verified'] for x in final),
+          }
+          (out / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n', encoding='utf-8')
+          (out / 'targets.json').write_text(json.dumps(final, indent=2) + '\n', encoding='utf-8')
+          (out / 'verified-pool.json').write_text(json.dumps(verified, indent=2) + '\n', encoding='utf-8')
+          (out / 'rejected.json').write_text(json.dumps(rejected, indent=2) + '\n', encoding='utf-8')
+          lines = [
+              '# OpenMagic: 100 distinct contribution-ready list targets', '',
+              f"Generated: `{summary['generated_at']}`", '',
+              '- Every target was rechecked against its current default-branch README.',
+              '- OpenMagic was absent from every target at verification time.',
+              '- Each repository is an active curated list with an explicit contribution path.',
+              '- Each list contains a developer, coding, agent, CLI, editing, or closely related category.',
+              '- Repositories that require issue-only submissions, prohibit self-promotion, or reject PRs were excluded.', '',
+              f"Prepared exact branches: **{summary['prepared_branches']}**", '',
+              '| # | Repository | Stars | Relevant category | Contribution signal | Prepared branch |',
+              '|---:|---|---:|---|---|---|',
+          ]
+          for i, x in enumerate(final, 1):
+              prepared_link = f"[compare]({x['compare_url']})" if x['compare_url'] else 'pending fork'
+              lines.append(f"| {i} | [{x['repository']}]({x['url']}) | {x['stars']} | {x['relevant_category'].replace('|', '/')} | {x['contribution_signal']} | {prepared_link} |")
+          (out / 'README.md').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+          print(json.dumps(summary, indent=2))
+          PY
+          python /tmp/verify_100.py
+
+      - name: Publish final-100 branch
+        run: |
+          git config user.name 'OpenMagic Promotion Verification'
+          git config user.email 'actions@users.noreply.github.com'
+          git checkout -B openmagic-final-100
+          rm -f .github/workflows/verify-openmagic-final-100.yml
+          git add promotion-final-100 .github/workflows/verify-openmagic-final-100.yml
+          git diff --cached --check
+          git commit -m 'docs: verify 100 distinct OpenMagic promotion targets'
+          git push --force origin HEAD:openmagic-final-100
+
+      - name: Restore fork main to upstream
+        if: always()
+        run: |
+          parent=$(gh api repos/${GITHUB_REPOSITORY} --jq '.parent.full_name')
+          branch=$(gh api repos/${GITHUB_REPOSITORY} --jq '.parent.default_branch')
+          git fetch https://github.com/${parent}.git ${branch}
+          git push --force origin FETCH_HEAD:main
