@@ -1,0 +1,1354 @@
+[
+  {
+    "repository": "0voice/awesome-ai-tools",
+    "number": 8,
+    "url": "https://github.com/0voice/awesome-ai-tools/pull/8",
+    "title": "Add OpenMagic to browser plugins",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:33:55Z",
+    "updated_at": "2026-04-20T20:33:55Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-3",
+    "head_branch": "openmagic-browser-plugin",
+    "head_sha": "4c341cc6795e240f7651b7007f3e25d27489c8c3",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| OpenMagic | AI \u9a71\u52a8\u7684\u6d4f\u89c8\u5668\u4fa7\u7f16\u7801\u5de5\u5177\u680f\uff0c\u6355\u83b7\u9875\u9762\u4e0a\u4e0b\u6587\u5e76\u5728\u786e\u8ba4\u540e\u5e94\u7528 diff | \u514d\u8d39 | \u4e2d | \u9700\u8981\u5728\u771f\u5b9e Web \u5e94\u7528\u4e2d\u5feb\u901f\u7f16\u8f91\u4e0e\u9a8c\u8bc1\u7684\u5f00\u53d1\u8005 | [\u70b9\u51fb\u8fdb\u5165](https://github.com/Kalmuraee/OpenMagic) |"
+    ],
+    "duplicate_count": 3,
+    "repo_fit": "high",
+    "repo_stars": 429,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-18T12:29:23Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "abdulwasea89/awesome-ai-agents-and-agentic-ai-apps",
+    "number": 3,
+    "url": "https://github.com/abdulwasea89/awesome-ai-agents-and-agentic-ai-apps/pull/3",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:14:22Z",
+    "updated_at": "2026-04-20T20:16:47Z",
+    "comments": 1,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-and-agentic-ai-apps",
+    "head_branch": "openmagic-add",
+    "head_sha": "77fab98a39cf00361dc169fffb4c3178ade44a49",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 9,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-10-08T12:48:30Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "ai-agents-simplified/Awesome-AI-Tools",
+    "number": 2,
+    "url": "https://github.com/ai-agents-simplified/Awesome-AI-Tools/pull/2",
+    "title": "Add OpenMagic to featured AI tools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:35:05Z",
+    "updated_at": "2026-04-20T20:35:05Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/Awesome-AI-Tools-10",
+    "head_branch": "openmagic-featured",
+    "head_sha": "39859e7e38c7de462cc65bf98a77123a9b607d4c",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| [OpenMagic](https://github.com/Kalmuraee/OpenMagic) | AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy. | Automation & Productivity |"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-03-30T21:47:44Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "AI-Tools-Inc/awesome-ai-tools",
+    "number": 19,
+    "url": "https://github.com/AI-Tools-Inc/awesome-ai-tools/pull/19",
+    "title": "Add OpenMagic to AI developer tools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:39:36Z",
+    "updated_at": "2026-04-20T20:39:36Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-5",
+    "head_branch": "openmagic-ai-developer-tools",
+    "head_sha": "c76e0f431daaac6e4282774c918e743c9acbff52",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - Browser-side AI coding toolbar for live web app edits with context capture and approved diffs. [![link]](https://github.com/Kalmuraee/OpenMagic)"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 45,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-08-25T00:31:31Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "altengineer/awesome-ai-repositories",
+    "number": 18,
+    "url": "https://github.com/altengineer/awesome-ai-repositories/pull/18",
+    "title": "Add OpenMagic to Copilot Development",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:32:00Z",
+    "updated_at": "2026-04-20T20:32:00Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-repositories",
+    "head_branch": "openmagic-copilot-development",
+    "head_sha": "b7ff281208154fbf1a7db22d49265359d3e93260",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| [OpenMagic](https://github.com/Kalmuraee/OpenMagic) | <a href=https://github.com/Kalmuraee/OpenMagic><img src=\"https://img.shields.io/github/stars/Kalmuraee/OpenMagic?style=social\" width=100/></a> |"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "medium",
+    "repo_stars": 136,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-03-20T05:02:48Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "alternbits/awesome-ai-agents",
+    "number": 30,
+    "url": "https://github.com/alternbits/awesome-ai-agents/pull/30",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:15:50Z",
+    "updated_at": "2026-04-20T20:15:50Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-8",
+    "head_branch": "openmagic-add",
+    "head_sha": "0f0b9f0dce30a5e920a3a6f6e802c68c60916676",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 148,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-02-02T13:48:07Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "AntonOsika/awesome-open-ai-devtools",
+    "number": 2,
+    "url": "https://github.com/AntonOsika/awesome-open-ai-devtools/pull/2",
+    "title": "Add OpenMagic to awesome-open-ai-devtools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T19:47:19Z",
+    "updated_at": "2026-04-25T06:25:05Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-open-ai-devtools",
+    "head_branch": "openmagic-add",
+    "head_sha": "a81ad41accc497d296d9381efa73542c0c4201b9",
+    "base_branch": "main",
+    "changed_paths": [
+      "readme.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 29,
+    "repo_archived": false,
+    "repo_pushed_at": "2023-12-01T10:53:59Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "Bert2048/awesome-ai-agents",
+    "number": 2,
+    "url": "https://github.com/Bert2048/awesome-ai-agents/pull/2",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:14:37Z",
+    "updated_at": "2026-04-20T20:14:37Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-4",
+    "head_branch": "openmagic-add",
+    "head_sha": "718edb1726139b5b4ab0dc17b4809849a8a1a120",
+    "base_branch": "master",
+    "changed_paths": [
+      "README.fr.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-22T19:17:05Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "buainoai/awesome-ai-devtools-multilingual",
+    "number": 1,
+    "url": "https://github.com/buainoai/awesome-ai-devtools-multilingual/pull/1",
+    "title": "Add OpenMagic to awesome-ai-devtools-multilingual",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T19:54:57Z",
+    "updated_at": "2026-04-20T19:54:57Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-devtools-multilingual",
+    "head_branch": "openmagic-add",
+    "head_sha": "2122bac02b8e402e1ee7fee8b547e8945223def1",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) \u2014 \u4e00\u4e2a\u9002\u7528\u4e8e\u4efb\u4f55 Web \u5e94\u7528\u7684 AI \u7f16\u7801\u5de5\u5177\u680f\uff0c\u901a\u8fc7\u53cd\u5411\u4ee3\u7406\u6ce8\u5165\u60ac\u6d6e\u680f\uff0c\u6355\u83b7\u5143\u7d20\u4e0a\u4e0b\u6587\uff0c\u9884\u89c8 diff\uff0c\u5e76\u5728\u786e\u8ba4\u540e\u5e94\u7528\u4fee\u6539\u3002"
+    ],
+    "duplicate_count": 10,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-02-24T08:35:35Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "Caron77ai/awesome-ai-agents",
+    "number": 1,
+    "url": "https://github.com/Caron77ai/awesome-ai-agents/pull/1",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:13:54Z",
+    "updated_at": "2026-04-20T20:13:54Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-1",
+    "head_branch": "openmagic-add",
+    "head_sha": "b5be2a619fa4761396873c114a3c21aa9503c054",
+    "base_branch": "main",
+    "changed_paths": [
+      "README-en.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 6,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-05-23T07:26:41Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "cporter202/awesome-ai-tools",
+    "number": 21,
+    "url": "https://github.com/cporter202/awesome-ai-tools/pull/21",
+    "title": "Add OpenMagic to Automation & Integration",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:20:56Z",
+    "updated_at": "2026-07-28T02:01:43Z",
+    "comments": 1,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-2",
+    "head_branch": "openmagic-automation",
+    "head_sha": "fd5e7093d60a6a1adb6bfa0a3aae04093519190b",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "### OpenMagic",
+      "**Website:** [OpenMagic](https://github.com/Kalmuraee/OpenMagic)",
+      "**Description:** OpenMagic is an AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 3,
+    "repo_fit": "high",
+    "repo_stars": 263,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-08-14T03:20:33Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "dbpunk-labs/awesome-ai-developer-tools",
+    "number": 2,
+    "url": "https://github.com/dbpunk-labs/awesome-ai-developer-tools/pull/2",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:18:55Z",
+    "updated_at": "2026-04-20T20:18:55Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-developer-tools-1",
+    "head_branch": "openmagic-add",
+    "head_sha": "a5a460c904aad4b145d3435af0dac3f5b30812a0",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2023-10-19T16:28:01Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "devtoolsd/awesome-devtools",
+    "number": 198,
+    "url": "https://github.com/devtoolsd/awesome-devtools/pull/198",
+    "title": "Add OpenMagic to awesome-devtools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T19:43:35Z",
+    "updated_at": "2026-04-20T19:43:35Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-devtools",
+    "head_branch": "openmagic-add",
+    "head_sha": "58ea8e4104456a865cd2cb7771e25f9a1a24a906",
+    "base_branch": "main",
+    "changed_paths": [
+      "readme.md"
+    ],
+    "added_lines": [
+      "* [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - AI-powered coding toolbar for any web app. Injects a floating toolbar via reverse proxy, captures element context, previews diffs, and applies approved changes in real time."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 676,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-10-12T01:02:48Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "DirectorySurf/awesome-ai-agents-directories",
+    "number": 27,
+    "url": "https://github.com/DirectorySurf/awesome-ai-agents-directories/pull/27",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:15:42Z",
+    "updated_at": "2026-04-20T20:15:42Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-directories",
+    "head_branch": "openmagic-add",
+    "head_sha": "f6f2850c20927b5b5946943651645bf4918f560f",
+    "base_branch": "master",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 153,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-07-19T10:44:14Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "furudo-erika/awesome-ai-coding-tools",
+    "number": 4,
+    "url": "https://github.com/furudo-erika/awesome-ai-coding-tools/pull/4",
+    "title": "Add OpenMagic to general assistants",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T21:07:57Z",
+    "updated_at": "2026-04-20T21:07:57Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-6",
+    "head_branch": "openmagic-general-assistants-furu",
+    "head_sha": "b2fca8bb31170bd21fd5ccca524c023d1a37a82c",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "*   **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - Browser-side AI coding toolbar for live web app edits with context capture and approved diffs."
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-06-08T12:40:08Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "GiraldoNainggolan/awesome-ai-tools",
+    "number": 1,
+    "url": "https://github.com/GiraldoNainggolan/awesome-ai-tools/pull/1",
+    "title": "Add OpenMagic to Data and ML Tools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:43:48Z",
+    "updated_at": "2026-04-20T20:44:03Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-11",
+    "head_branch": "openmagic-data-ml-tools",
+    "head_sha": "8e79fc1d0d4e32853a5355b9516f6f4246b4a3f7",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-10-20T05:39:22Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "Icloudeng/awesome-ai-coding-tools",
+    "number": 7,
+    "url": "https://github.com/Icloudeng/awesome-ai-coding-tools/pull/7",
+    "title": "Add OpenMagic to AI IDE",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:50:07Z",
+    "updated_at": "2026-04-20T20:50:07Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-9",
+    "head_branch": "openmagic-dev-tools-icloud",
+    "head_sha": "90555f619d4b47111e4018fbfdcd64b7d330a275",
+    "base_branch": "master",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - Browser-side AI coding toolbar for live web app edits with context capture and approval-gated diffs. ([Read more](/details/openmagic.md)) `browser` `editing` `diff`"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-23T06:56:08Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "inmve/awesome-ai-coding-techniques",
+    "number": 33,
+    "url": "https://github.com/inmve/awesome-ai-coding-techniques/pull/33",
+    "title": "Add OpenMagic to README-pt.md",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:13:10Z",
+    "updated_at": "2026-04-20T20:13:10Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-techniques",
+    "head_branch": "openmagic-README_pt_md",
+    "head_sha": "df1e86723f62bad948726a8cc543019cf2ab7ac4",
+    "base_branch": "main",
+    "changed_paths": [
+      "README-pt.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 6,
+    "repo_fit": "high",
+    "repo_stars": 349,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-11-26T21:43:56Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "kax168/awesome-ai-coding-agents",
+    "number": 2,
+    "url": "https://github.com/kax168/awesome-ai-coding-agents/pull/2",
+    "title": "Add OpenMagic to AI coding agents",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:40:31Z",
+    "updated_at": "2026-04-20T20:40:31Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-agents-1",
+    "head_branch": "openmagic-ai-coding-agents",
+    "head_sha": "7f77aca7827d6e02d88768e619e214eb223354b8",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "### OpenMagic",
+      "- Website: https://github.com/Kalmuraee/OpenMagic"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-15T18:01:32Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "kax168/awesome-ai-coding-assistants-2026",
+    "number": 2,
+    "url": "https://github.com/kax168/awesome-ai-coding-assistants-2026/pull/2",
+    "title": "Add OpenMagic to browser editing",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:38:52Z",
+    "updated_at": "2026-04-20T20:38:52Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-assistants-2026",
+    "head_branch": "openmagic-browser-editing",
+    "head_sha": "462a1c94f9e779029681a3c790a7e93316bac44f",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "### OpenMagic",
+      "- [GitHub](https://github.com/Kalmuraee/OpenMagic)"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-07T18:02:12Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "kax168/awesome-ai-coding-tools-2026",
+    "number": 2,
+    "url": "https://github.com/kax168/awesome-ai-coding-tools-2026/pull/2",
+    "title": "Add OpenMagic to AI code editors",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:44:43Z",
+    "updated_at": "2026-04-20T20:44:43Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-2026",
+    "head_branch": "openmagic-ai-code-editors",
+    "head_sha": "561ff7297ed5275e0cc70014c9803d76b5b84833",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "### [OpenMagic](https://github.com/Kalmuraee/OpenMagic)"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-10T18:02:30Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "kax168/awesome-ai-dev-tools-2026",
+    "number": 2,
+    "url": "https://github.com/kax168/awesome-ai-dev-tools-2026/pull/2",
+    "title": "Add OpenMagic to code completion",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:44:44Z",
+    "updated_at": "2026-04-20T20:44:44Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-dev-tools-2026",
+    "head_branch": "openmagic-code-completion",
+    "head_sha": "aef0058ab82b8c526d34cf4cfbe2f6a0150be50f",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - Browser-side AI coding toolbar for live web app edits with context capture and approved diffs"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-08T18:01:48Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "launchapp-dev/awesome-ai-coding-tools",
+    "number": 2,
+    "url": "https://github.com/launchapp-dev/awesome-ai-coding-tools/pull/2",
+    "title": "Add OpenMagic to AI Code Editors",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T21:08:58Z",
+    "updated_at": "2026-04-20T21:08:58Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-3",
+    "head_branch": "openmagic-ai-code-editors-launch",
+    "head_sha": "6dddf695c6a7cde254f9ed9b5fda1728c084c833",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) \ud83d\udfe2 \u2014 Browser-side AI coding toolbar for live web app edits with context capture and approved diffs."
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 8,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-08-14T09:18:02Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "manasa-shivananda/manasa-shivananda",
+    "number": 1,
+    "url": "https://github.com/manasa-shivananda/manasa-shivananda/pull/1",
+    "title": "Add OpenMagic to projects",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:43:48Z",
+    "updated_at": "2026-04-20T20:43:48Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/manasa-shivananda",
+    "head_branch": "openmagic-projects-manasa",
+    "head_sha": "003a1c5edc1dbda6619c235692312948b241998b",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "\ud83d\udd27 [OpenMagic](https://github.com/Kalmuraee/OpenMagic)"
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-27T08:18:00Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "nanogiants/awesome-ai-tools",
+    "number": 18,
+    "url": "https://github.com/nanogiants/awesome-ai-tools/pull/18",
+    "title": "Add OpenMagic to Code Assistant",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:46:12Z",
+    "updated_at": "2026-04-20T20:46:12Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-12",
+    "head_branch": "openmagic-code-assistant-nanogiants",
+    "head_sha": "3511de546af3d8394bcf6eaaa5a6ecb975d2f759",
+    "base_branch": "master",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - Browser-side AI coding toolbar for live web app edits with context capture and approved diffs."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 28,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-08-19T14:58:28Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "natiixnt/Awesome-AI-Dev-Tools",
+    "number": 2,
+    "url": "https://github.com/natiixnt/Awesome-AI-Dev-Tools/pull/2",
+    "title": "Add OpenMagic to coding assistants",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:38:53Z",
+    "updated_at": "2026-04-20T20:38:53Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/Awesome-AI-Dev-Tools-1",
+    "head_branch": "openmagic-coding-assist",
+    "head_sha": "2dffdaec1e8d64001890e70eb21f44de78ae0cb8",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| OpenMagic | Browser-side AI coding toolbar for editing live web apps with context capture and approved diffs. | https://github.com/Kalmuraee/OpenMagic | `browser`, `context`, `diff` |"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "medium",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-11T17:07:08Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "oakeighty5/awesome-ai-agents",
+    "number": 2,
+    "url": "https://github.com/oakeighty5/awesome-ai-agents/pull/2",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:15:03Z",
+    "updated_at": "2026-04-20T20:15:03Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-6",
+    "head_branch": "openmagic-add",
+    "head_sha": "6901a4c16be0aadbfc0f9cdff3c752450db6add3",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 3,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-12T06:38:57Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "openbestof/awesome-ai",
+    "number": 59,
+    "url": "https://github.com/openbestof/awesome-ai/pull/59",
+    "title": "Add OpenMagic to Autonomous Agents",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:42:37Z",
+    "updated_at": "2026-04-20T20:42:37Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai",
+    "head_branch": "openmagic-autonomous-agents-openbestof",
+    "head_sha": "aeb139cafe1e214f2d95732c08983ede0c60e63d",
+    "base_branch": "main",
+    "changed_paths": [
+      "readme.md"
+    ],
+    "added_lines": [
+      "| <img src=\"https://ai.openbestof.com/images/tools/openmagic_icon.webp\" width=\"30\" height=\"30\"> | [OpenMagic](https://github.com/Kalmuraee/OpenMagic) | Browser-side AI coding toolbar for live web app edits with context capture and approved diffs. | ![GitHub Repo stars](https://img.shields.io/github/stars/Kalmuraee/OpenMagic) |"
+    ],
+    "duplicate_count": 9,
+    "repo_fit": "high",
+    "repo_stars": 585,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-05-04T13:09:19Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "OrrisTech/awesome-ai-agents",
+    "number": 1,
+    "url": "https://github.com/OrrisTech/awesome-ai-agents/pull/1",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:14:30Z",
+    "updated_at": "2026-04-20T20:14:30Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-3",
+    "head_branch": "openmagic-add",
+    "head_sha": "c360647b49f2d2eb71aa8351629f18e08c1918a8",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.de.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 3,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-03-31T06:25:21Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "Ravi-Chandraa/awesome-ai-devtools",
+    "number": 1,
+    "url": "https://github.com/Ravi-Chandraa/awesome-ai-devtools/pull/1",
+    "title": "Add OpenMagic to awesome-ai-devtools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T19:48:44Z",
+    "updated_at": "2026-04-20T19:48:44Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-devtools-1",
+    "head_branch": "openmagic-add",
+    "head_sha": "ba430478fdee7eac7910260ce7fd632860098768",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) \u2014 AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-10-12T15:58:35Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "RayeesYousufGenAi/awesome-ai-agents",
+    "number": 16,
+    "url": "https://github.com/RayeesYousufGenAi/awesome-ai-agents/pull/16",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:14:01Z",
+    "updated_at": "2026-04-20T20:14:01Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-agents-2",
+    "head_branch": "openmagic-add",
+    "head_sha": "9221e7019fd80a1b18290e9c98668a0dbb7abc9d",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "medium",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-01T15:15:32Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "runaicode/awesome-ai-coding-tools",
+    "number": 2,
+    "url": "https://github.com/runaicode/awesome-ai-coding-tools/pull/2",
+    "title": "Add OpenMagic to AI Code Editors",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T21:06:32Z",
+    "updated_at": "2026-04-20T21:06:32Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-10",
+    "head_branch": "openmagic-ai-code-editors-ru1",
+    "head_sha": "206f2277f173f1e68d01e0d497cec674570d9759",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| [OpenMagic](https://github.com/Kalmuraee/OpenMagic) | Browser-side AI coding toolbar for live web app edits with context capture and approved diffs | Free |"
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-02-20T08:55:38Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "shyamsundarashok/awesome-ai-coding-tools",
+    "number": 4,
+    "url": "https://github.com/shyamsundarashok/awesome-ai-coding-tools/pull/4",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T21:08:38Z",
+    "updated_at": "2026-04-20T21:08:38Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-tools-8",
+    "head_branch": "openmagic-list-shyam",
+    "head_sha": "265d6a9b90ef97641c768365fd8d4970eedab086",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "OpenMagic: https://github.com/Kalmuraee/OpenMagic"
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-11-18T17:27:05Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "simoninithomas/awesome-ai-tools-for-game-dev",
+    "number": 38,
+    "url": "https://github.com/simoninithomas/awesome-ai-tools-for-game-dev/pull/38",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:20:21Z",
+    "updated_at": "2026-04-20T20:21:12Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-for-game-dev",
+    "head_branch": "openmagic-add",
+    "head_sha": "5aa6872c3a3d0235d94a0ae7918a37fefd905de5",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 1033,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-11-19T18:22:07Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "skurbro/DevKit",
+    "number": 1,
+    "url": "https://github.com/skurbro/DevKit/pull/1",
+    "title": "Add OpenMagic to browser tools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:28:32Z",
+    "updated_at": "2026-04-20T20:28:32Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/DevKit",
+    "head_branch": "main",
+    "head_sha": "266848301f2e0c2faeaab1b5e0e1f37379eabd1f",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-05-27T19:46:37Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "tamilselvanarjun/awesome-ai-devtools",
+    "number": 1,
+    "url": "https://github.com/tamilselvanarjun/awesome-ai-devtools/pull/1",
+    "title": "Add OpenMagic to awesome-ai-devtools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T19:49:05Z",
+    "updated_at": "2026-04-20T19:49:05Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-devtools-2",
+    "head_branch": "openmagic-add",
+    "head_sha": "962cd3f1e8f7ea2ca69a2578308528889a50a73e",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) \u2014 AI-powered coding toolbar for any web app that captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2024-03-04T11:48:55Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "tomrzv/Awesome-AI-Coding-Tools",
+    "number": 4,
+    "url": "https://github.com/tomrzv/Awesome-AI-Coding-Tools/pull/4",
+    "title": "Add OpenMagic to AI IDEs",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T21:10:30Z",
+    "updated_at": "2026-04-20T21:10:30Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/Awesome-AI-Coding-Tools-1",
+    "head_branch": "openmagic-ai-ides-tom",
+    "head_sha": "6d032137c1e552bf016d096d9e121def14ec3304",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| OpenMagic | Browser-side AI coding toolbar for live web app edits with context capture and approved diffs | [\ud83d\udd17](https://github.com/Kalmuraee/OpenMagic) |"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-30T08:13:28Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "ToolkitlyAI/awesome-ai-tools",
+    "number": 17,
+    "url": "https://github.com/ToolkitlyAI/awesome-ai-tools/pull/17",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:16:48Z",
+    "updated_at": "2026-04-20T20:16:48Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-6",
+    "head_branch": "openmagic-add",
+    "head_sha": "c41172764a323e4294e0ed3db47f3799f5f54c03",
+    "base_branch": "master",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 23,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-08-25T08:01:52Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "vinkius-labs/awesome-ai-coding-agents",
+    "number": 2,
+    "url": "https://github.com/vinkius-labs/awesome-ai-coding-agents/pull/2",
+    "title": "Add OpenMagic to IDE agents",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:40:31Z",
+    "updated_at": "2026-04-20T20:40:31Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-coding-agents",
+    "head_branch": "openmagic-ide-agents",
+    "head_sha": "dfbf1a9e8ceb2b5d9f1534752d747b32b4548d1a",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "| [OpenMagic](https://github.com/Kalmuraee/OpenMagic) | Browser-side | Via browser | Live web app coding toolbar with context capture and approved diffs |"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 2,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-14T18:49:32Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "vominh1919/awesome-ai-tools",
+    "number": 2,
+    "url": "https://github.com/vominh1919/awesome-ai-tools/pull/2",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:17:01Z",
+    "updated_at": "2026-04-20T20:17:01Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-4",
+    "head_branch": "openmagic-add",
+    "head_sha": "a993c3eee0cd4d11821734927f7927b55b0a8f28",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-05-12T15:00:16Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "whitepeak-studio/awesome-ai-tools",
+    "number": 2,
+    "url": "https://github.com/whitepeak-studio/awesome-ai-tools/pull/2",
+    "title": "Add OpenMagic to Coding AI",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:31:11Z",
+    "updated_at": "2026-04-20T20:31:11Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-9",
+    "head_branch": "openmagic-coding-ai",
+    "head_sha": "a11c6ae9420b0d209a2dda7d1a7f781c757bacac",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- OpenMagic"
+    ],
+    "duplicate_count": 2,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-12T15:26:58Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "wuchulan47/awesome-ai-tools",
+    "number": 3,
+    "url": "https://github.com/wuchulan47/awesome-ai-tools/pull/3",
+    "title": "Add OpenMagic to browser automation",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:46:37Z",
+    "updated_at": "2026-04-20T20:46:37Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-13",
+    "head_branch": "openmagic-browser-automation-cn",
+    "head_sha": "a9bb847c293bab581d3c35ddb7f7ff5c167b3b54",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) \u2014 \u6d4f\u89c8\u5668\u4fa7 AI \u7f16\u7801\u5de5\u5177\u680f\uff0c\u652f\u6301\u4e0a\u4e0b\u6587\u6355\u83b7\u4e0e\u786e\u8ba4\u540e\u5e94\u7528 diff\uff08\u771f\u5b9e\u7f51\u9875\u7f16\u8f91\uff09"
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 55,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-11-06T13:13:06Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "yellcamap/awesome-ai-dev-tools",
+    "number": 1,
+    "url": "https://github.com/yellcamap/awesome-ai-dev-tools/pull/1",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:18:36Z",
+    "updated_at": "2026-04-20T20:18:36Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-dev-tools-2",
+    "head_branch": "openmagic-add",
+    "head_sha": "6862d05f44ee6098d1defeb9951eca5ad38a6695",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 0,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-04-13T21:58:59Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "yokomakes/awesome-ai-tools",
+    "number": 3,
+    "url": "https://github.com/yokomakes/awesome-ai-tools/pull/3",
+    "title": "Add OpenMagic to developer tools",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:48:23Z",
+    "updated_at": "2026-04-20T20:48:23Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-15",
+    "head_branch": "openmagic-developer-tools-minou",
+    "head_sha": "c3d9a506e56d54bcc9372b7bf1deb1e7bba169a8",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- [OpenMagic](https://github.com/Kalmuraee/OpenMagic) - Browser-side AI coding toolbar for live web app edits with context capture and approval-gated diffs."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 50,
+    "repo_archived": false,
+    "repo_pushed_at": "2025-08-24T17:19:25Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  },
+  {
+    "repository": "zhufanhaosha/awesome-ai-tools",
+    "number": 1,
+    "url": "https://github.com/zhufanhaosha/awesome-ai-tools/pull/1",
+    "title": "Add OpenMagic",
+    "state": "open",
+    "merged_at": null,
+    "created_at": "2026-04-20T20:16:55Z",
+    "updated_at": "2026-04-20T20:16:55Z",
+    "comments": 0,
+    "labels": [],
+    "head_repo": "Kalmuraee/awesome-ai-tools-7",
+    "head_branch": "openmagic-add",
+    "head_sha": "e39c96b19a9ae6d148ff0e38fd3b32927471e0c2",
+    "base_branch": "main",
+    "changed_paths": [
+      "README.md"
+    ],
+    "added_lines": [
+      "- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy."
+    ],
+    "duplicate_count": 1,
+    "repo_fit": "high",
+    "repo_stars": 1,
+    "repo_archived": false,
+    "repo_pushed_at": "2026-03-18T02:35:02Z",
+    "currently_lists_openmagic": false,
+    "listing_file": null,
+    "recommendation": "keep_open"
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "pull_requests": 105,
+  "unique_repositories": 61,
+  "states": {
+    "open": 90,
+    "closed": 10,
+    "merged": 5
+  },
+  "recommendations": {
+    "close_already_listed": 1,
+    "close_duplicate": 39,
+    "close_inactive_repository": 1,
+    "closed_unmerged": 10,
+    "keep_open": 45,
+    "manual_fit_review": 4,
+    "merged": 5
+  },
+  "duplicate_repositories": 23
+}
